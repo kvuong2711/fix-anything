@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fixanything"
+version = "0.1.0"
+description = "FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+    # Pinned DiffSynth-Studio commit (Wan2.1 model code, LoRA loading, VRAM management).
+    "diffsynth @ git+https://github.com/modelscope/DiffSynth-Studio.git@afd101f3452c9ecae0c87b79adfa2e22d65ffdc3",
+    "torch>=2.0",
+    "torchvision",
+    "transformers<5",   # DiffSynth at this commit is not compatible with transformers 5.x
+    "numpy",
+    "pillow",
+    "imageio[ffmpeg]",
+    "tqdm",
+    "einops",
+]
+
+[project.optional-dependencies]
+# Reconstruct your own captures with MapAnything and render them (scripts/run_mapanything.py)
+mapanything = [
+    "mapanything @ git+https://github.com/facebookresearch/map-anything.git",
+    "pyrender",
+    "scipy",
+]
+
+[tool.setuptools.packages.find]
+include = ["fixanything*"]
