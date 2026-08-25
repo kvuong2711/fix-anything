@@ -135,7 +135,7 @@ This codebase builds upon many excellent open-source projects, such as [DiffSynt
 
 ## 🐛 Issues
 
-If you have any problem/question/suggestion, feel free to create an issue or reach out directly to me via email ([kvuong@andrew.cmu.edu](mailto:kvuong@andrew.cmu.edu)).
+If you have any problem/question/suggestion, feel free to create an issue or reach out directly to me via [email](mailto:kvuong@andrew.cmu.edu).
 
 ## 📝 Citation
 
