@@ -3,7 +3,7 @@
 Example:
     python scripts/run_inference.py --input examples/dl3dv_3dgs/input.mp4 --output_dir outputs/dl3dv_3dgs
 
-`load_pipeline()` and `fix_video()` below are the whole inference API; the evaluation script imports them from here.
+`load_pipeline()` and `fix_video()` below are the whole inference API.
 """
 import argparse
 import glob
